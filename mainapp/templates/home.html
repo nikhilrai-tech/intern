@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Submitted Data</h1>
+    
+    {% for fm in fm %}
+        <h5>id: {{ fm.class_id }}</h5>
+        <h5>name: {{ fm.name }}</h5>
+        <h5>reference: {{ fm.reference }}</h5>
+        <!-- <form action="" method="post"> -->
+            <!-- {% csrf_token %} -->
+            <a href="{% url 'delete' fm.class_id %}">Delete</a>
+        <!-- </form> -->
+        <br>
+    {% endfor %}
+</body>
+</html>
