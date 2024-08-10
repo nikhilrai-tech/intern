@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>bf</title>
 </head>
 <body>
+    welcome {{request.user.username}}
+    <a href="{%url 'logout'%}">Logout</a>
     {% for message in messages %}
          {% if message.tags == 'error' %}
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
